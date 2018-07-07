@@ -1,0 +1,23 @@
+{
+  "name": "apps",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "BeYanJin <tanyujin_scut@163.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-timer": "*",
+    "react": "^15.5.4"
+  }
+}

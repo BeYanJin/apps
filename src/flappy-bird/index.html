@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cmn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta author="谈裕锦" />
+    <meta version="1.0" />
+    <meta keywords="FlappyBird flappy bird 像素鸟" />
+    <meta descirption="这是一款有趣的小游戏, 英文名叫: FlappyBird, 中文称为: 像素鸟, 你要控制好小鸟, 使它能通过那些管道, 没通过一个管道得一分, 撞到管道上或者碰到地面, 游戏就结束" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+    <title>Flappy Bird</title>
+</head>
+
+<body>
+
+    <div class="head-img hide">
+        <img src="static/images/head_title_up.png" alt="" />
+        <img src="static/images/head_title_down.png" alt="" />
+    </div>
+
+    <div class="ready-img hide">
+        <img src="static/images/get_ready.png" alt="" />
+    </div>
+
+    <div class="bird-img hide">
+        <img src="static/images/up_Bird0.png" alt="" />
+        <img src="static/images/up_Bird1.png" alt="" />
+        <img src="static/images/Bird0.png" alt="" />
+        <img src="static/images/down_Bird0.png" alt="" />
+        <img src="static/images/down_Bird1.png" alt="" />
+    </div>
+
+    <div class="medal-img hide">
+        <img src="static/images/medal0.png" alt="" />
+        <img src="static/images/medal1.png" alt="" />
+        <img src="static/images/medal2.png" alt="" />
+        <img src="static/images/medal3.png" alt="" />
+    </div>
+
+    <div class="counter-img hide">
+        <img src="static/images/0.png" alt="" />
+        <img src="static/images/1.png" alt="" />
+        <img src="static/images/2.png" alt="" />
+        <img src="static/images/3.png" alt="" />
+        <img src="static/images/4.png" alt="" />
+        <img src="static/images/5.png" alt="" />
+        <img src="static/images/6.png" alt="" />
+        <img src="static/images/7.png" alt="" />
+        <img src="static/images/8.png" alt="" />
+        <img src="static/images/9.png" alt="" />
+    </div>
+
+    <div class="score-img hide">
+        <img src="static/images/0.jpg" alt="" />
+        <img src="static/images/1.jpg" alt="" />
+        <img src="static/images/2.jpg" alt="" />
+        <img src="static/images/3.jpg" alt="" />
+        <img src="static/images/4.jpg" alt="" />
+        <img src="static/images/5.jpg" alt="" />
+        <img src="static/images/6.jpg" alt="" />
+        <img src="static/images/7.jpg" alt="" />
+        <img src="static/images/8.jpg" alt="" />
+        <img src="static/images/9.jpg" alt="" />
+    </div>
+
+    <div id="game-bg">
+        <!-- 开始标题 -->
+        <div id="head-title" class="head-title-down">
+            <img src="static/images/head_title_up.png" draggable="false" alt="head title" />
+        </div>
+        <div id="start-btn">
+            <img src="static/images/start.jpg" draggable="false" alt="start button" />
+        </div>
+        <div id="counter">
+            <div id="num1"></div>
+            <div id="num2"></div>
+            <div id="num3"></div>
+        </div>
+        <div id="game-over">
+            <img src="static/images/game_over.png" alt="game over" />
+            <div>
+                <div id="medal"></div>
+                <div id="score">
+                    <div class="hundred"></div>
+                    <div class="decades"></div>
+                    <div class="unit"></div>
+                </div>
+                <div id="best">
+                    <div class="hundred"></div>
+                    <div class="decades"></div>
+                    <div class="unit"></div>
+                </div>
+                <img id="mes" src="static/images/message.jpg" alt="message" />
+            </div>
+            <img id="ok" src="static/images/ok.jpg" alt="ok" />
+        </div>
+        <div id="grassLand1"></div>
+        <div id="grassLand2"></div>
+    </div>
+
+</body>
+</html>

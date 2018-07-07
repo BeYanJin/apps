@@ -1,0 +1,45 @@
+// 潮汕快炒小哥跑的动画
+@include keyframes(run1) {
+    0%      { background-position: -5px -530px;  }
+    15%     { background-position: -5px -530px;  }
+    15.1%   { background-position: -95px -530px; }
+    75%     { background-position: -95px -530px; }
+    75.1%   { background-position: -5px -530px;  }
+    100%    { background-position: -5px -530px;  }
+};
+@include keyframes(run2) {
+    0%      { background-position: -5px -530px;  }
+    15%     { background-position: -5px -530px;  }
+    15.1%   { background-position: -95px -530px; }
+    75%     { background-position: -95px -530px; }
+    75.1%   { background-position: -5px -530px;  }
+    100%    { background-position: -5px -530px;  }
+};
+
+
+// 城管去捉人的动画
+@include keyframes(catch1) {
+    0%      { top: 230px; left: 10px; }
+    100%    { top: 200px; left: 76px; }
+};
+@include keyframes(catch2) {
+    0%      { top: 155px; left: 60px;  }
+    100%    { top: 170px; left: 100px; }
+};
+@include keyframes(catch3) {
+    0%      { top: 230px; left: 200px; }
+    100%    { top: 200px; left: 125px; }
+};
+
+
+// 打起来的动画
+@include keyframes(beat) {
+    0%      { background-position: 0 -120px;      }
+    25%     { background-position: 0 -120px;      }
+    25.1%   { background-position: -200px -120px; }
+    50%     { background-position: -200px -120px; }
+    50.1%   { background-position: 0 -120px;      }
+    75%     { background-position: 0 -120px;      }
+    75.1%   { background-position: -200px -120px; }
+    100%    { background-position: -200px -120px; }
+};

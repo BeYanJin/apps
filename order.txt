@@ -1,0 +1,9 @@
+生成最终文件：
+npm run build --env=dev/prod --name=project_name
+
+调试：
+npm start --env=dev/prod --name=project_name
+
+生成github pages：
+git subtree push --prefix=dist origin gh-pages
+

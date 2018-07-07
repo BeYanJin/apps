@@ -1,0 +1,227 @@
+#game-bg {
+    @include w-h(343px, 480px);
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.game-bg-day {
+    background-image: url("static/images/bg_day.png");
+}
+
+.game-bg-night {
+    background-image: url("static/images/bg_night.png");
+}
+
+#head-title {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.head-title-up {
+    top: 47px;
+}
+
+.head-title-down {
+    top: 50px;
+}
+
+
+#start-btn {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#grassLand1 {
+    @include w-h(100%, 10%);
+    position: absolute;
+    bottom: 0;
+    background-image: url("static/images/land.png");
+    background-size: 100% 100%;
+}
+
+#grassLand2 {
+    @include w-h(100%, 10%);
+    position: absolute;
+    bottom: 0;
+    left: 99%;
+    background-image: url("static/images/land.png");
+    background-size: 100% 100%;
+}
+
+#start-info {
+    width: 60%;
+    position: relative;
+    top: 40%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+#bird1 {
+    width: 14%;
+    @include position(absolute, top, 45%, left, 20px);
+    img {
+        width: 100%;
+        height: auto;
+    }
+    z-index: 99;
+}
+
+.block-wrap {
+    @include w-h(18.075%, 90%);
+    position: absolute;
+
+    .block-up-wrap {
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .block-down-wrap {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .block-up-wall {
+        width: 100%;
+        background: url("static/images/up_wall.png") repeat-y;
+        @include prefix(background-size, 100% 100%);
+    }
+    .block-up-pipe {
+        @include w-h(100%, 30px);
+        background: url("static/images/up_pipe.png") no-repeat;
+        @include prefix(background-size, 100% 100%);
+    }
+    .block-down-pipe {
+        @include w-h(100%, 30px);
+        background: url("static/images/down_pipe.png") no-repeat;
+        @include prefix(background-size, 100% 100%);
+
+    }
+    .block-down-wall {
+        width: 100%;
+        background: url("static/images/down_wall.png") repeat-y;
+        @include prefix(background-size, 100% 100%);
+    }
+}
+
+#game-over {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    display: none;
+    text-align: center;
+    z-index: 99;
+    img:first-child {
+        width: 65%;
+    }
+    div {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        #medal {
+            @include w-h(20%, 38%);
+            @include position(absolute, top, 35.5%, left, 11%);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #score {
+            @include w-h(20%, 18%);
+            @include position(absolute, top, 25.5%, right, 9.5%);
+            .hundred {
+                background-image: url("static/images/0.jpg");
+            }
+            .decades {
+                background-image: url("static/images/0.jpg");
+            }
+            .unit {
+                background-image: url("static/images/0.jpg");
+            }
+        }
+        #best {
+            @include w-h(20%, 18%);
+            @include position(absolute, top, 62%, right, 9.5%);
+            .hundred {
+                background-image: url("static/images/0.jpg");
+            }
+            .decades {
+                background-image: url("static/images/0.jpg");
+            }
+            .unit {
+                background-image: url("static/images/0.jpg");
+            }
+        }
+        .hundred {
+            @include w-h(33.3%, 100%);
+            float: left;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .decades {
+            @include w-h(33.3%, 100%);
+            float: left;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .unit {
+            @include w-h(33.3%, 100%);
+            float: left;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        #mes {
+            width: 100%;
+        }
+    }
+    #ok {
+        width: 35%;
+        cursor: pointer;
+    }
+}
+
+#counter {
+    @include w-h(100%, 44px);
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    font-size: 0;
+    z-index: 99;
+    #num1 {
+        @include w-h(24px, 100%);
+        display: none;
+        background-image: url("static/images/0.png");
+        background-repeat: no-repeat;
+    }
+    #num2 {
+        @include w-h(24px, 100%);
+        display: none;
+        background-image: url("static/images/0.png");
+        background-repeat: no-repeat;
+    }
+    #num3 {
+        @include w-h(24px, 100%);
+        display: none;
+        background-image: url("static/images/0.png");
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+html, body {
+    @include w-h(100%, 100%);
+    font-family: $fontStack;
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.show-inline {
+    display: inline !important;
+}
+
+.show-block {
+    display: block !important;
+}
+
+.show-inline-block {
+    display: inline-block !important;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}

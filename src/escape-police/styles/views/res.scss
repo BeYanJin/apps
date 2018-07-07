@@ -1,0 +1,9 @@
+// 宽度
+// PC端屏幕
+@media screen and (min-width: 768px) {
+    body #body-wrap {
+        width: 320px;
+        height: 480px;
+        margin-top: 50px;
+    }
+}

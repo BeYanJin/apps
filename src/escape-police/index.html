@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>三饭快炒小哥躲城管</title>
+</head>
+
+<body>
+
+	<!-- 主体 -->
+	<div id="body-wrap">
+
+		<!-- 初始层 -->
+		<div id="initial-layer">
+			<!-- 标题与规则图片 -->
+			<div id="rule">
+				<img src="static/images/rule.png" alt="小哥快跑规则" />
+			</div>
+			<!-- 开始游戏按钮 -->
+			<div id="start-btn">
+				<button></button>
+			</div>
+		</div>
+
+		<!-- 游戏的背景 -->
+		<div id="game-bg">
+			<div id="game-bg-color"></div>
+			<!-- 地面 -->
+			<div id="ground" class="hide">
+				<span style="display: none;">-1</span>
+				<span>0</span>
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+				<span>7</span>
+				<span>8</span>
+				<span>9</span>
+				<span>10</span>
+				<span>11</span>
+				<span>12</span>
+				<span>13</span>
+				<span>14</span>
+				<span>15</span>
+				<span>16</span>
+				<span>17</span>
+			</div>
+		</div>
+
+		<!-- 思考时间倒计时 -->
+		<div id="counter" class="hide">
+			<p>思考时间</p>
+			<span>2</span>
+		</div>
+
+        <!-- 潮汕快炒小哥 -->
+        <div id="packman"></div>
+
+        <!-- 城管 -->
+        <div id="police">
+            <div id="police1" class="police"></div>
+            <div id="police2" class="police"></div>
+            <div id="police3" class="police"></div>
+            <!-- 打斗场景 -->
+            <div id="beat-cloud"></div>
+        </div>
+
+		<!-- 游戏控制按钮 -->
+		<div id="game-btn" class="hide">
+			<button id="escape"></button>
+			<button id="run"></button>
+		</div>
+
+        <!-- 游戏结束层 -->
+        <div id="game-over-layer" class="hide">
+            <div id="share"></div>
+            <button id="how-to-play"></button>
+            <div id="info">
+                你跑了<span></span>格
+                <div></div>
+            </div>
+            <div id="game-over-btn">
+                <a href="https://form.mikecrm.com/DD90BH"><button id="join"></button></a>
+                <button id="again"></button>
+            </div>
+        </div>
+
+		<!-- 尾末版权信息 -->
+		<div id="footer">created by 华工创维俱乐部</div>
+	</div>
+
+    <!-- 游戏背景音乐 -->
+    <audio src="static/musics/bg-music.mp3" id="bg-music" autoplay="autoplay" loop="loop" hidden="true"></audio>
+    <!-- 游戏结束的音乐 -->
+    <audio src="static/musics/lose.mp3" id="lose-music" hidden="true"></audio>
+    <!-- 打斗的声效 -->
+    <audio src="static/musics/beat.mp3" id="beat-music" hidden="true"></audio>
+
+
+</body>
+
+</html>

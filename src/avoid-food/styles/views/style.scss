@@ -1,0 +1,107 @@
+.game-bg {
+	background-image: url("static/images/bg2.jpg");
+  	background-size: 100% 100%;
+}
+
+#head-title {
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+	width: 70%;
+	img {
+		@include w-h(100%, auto);
+	}
+}
+
+#share {
+	@include w-h(50%, auto);
+	@include position(absolute, top, 0, right, 0);
+}
+
+#info {
+	position: relative;
+	@include w-h(50%, 25%);
+	margin: 0 auto;
+	margin-top: -30px;
+	padding: 30px 10% 45px;
+	line-height: 30px;
+	letter-spacing: 1.5px;
+	border: 4.5px solid #f6fbf9;
+	background: #ddf1eb;
+	p:first-child {
+		color: #54b698;
+		font-size: 18px;
+	}
+	p:last-child {
+		color: #696969;
+		font-size: 15px;
+		span {
+			color: #ca8c8a;
+			font-size: 18px;
+		}
+	}
+}
+
+#start-btn {
+	text-align: center;
+	margin-top: 20px;
+	button {
+		width: 73%;
+		padding: 3.5% 0;
+		color: #fefefe;
+		font-size: 16px;
+		opacity: 0.9;
+		border-radius: 25px;
+		border-color: #357ebd;
+		background-color: #c85c5c;
+		&:hover {
+		    color: #fff;
+		    border-color: #204d74;
+		    background-color: #286090;
+		}
+	}
+}
+
+#footer {
+	margin-top: 20px;
+	width: 100%;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	opacity: 0.9;
+}
+
+#dialog {
+	@include position(absolute, top, 40%, left, 5%);
+	width: 90%;
+	color: #000;
+	background-color: #eaeaea;
+	border-radius:20px;
+	#game-over-text {
+		@include w-h(100%, 45%);
+		padding: 5% 0;
+		font-size: 18px;
+		text-align: center;
+	}
+	.btn-group {
+	  	font-size: 15px;
+	  	text-align: center;
+	  	font-weight: normal;
+	  	border: 2px solid #bebebe;
+	  	border-bottom: transparent;
+	  	border-radius: 0 0 22px 21.5px;
+	  	cursor: pointer;
+	  	clear: both;
+		#again-btn {
+			color: black;
+			border-right: 2px solid #bebebe;
+		}
+	  	.btn {
+  			float: left;
+  			width: 49%;
+  			padding: 3% 0;
+  			color: #55b599;
+	  	}
+	}
+
+}

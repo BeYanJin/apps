@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+    body {
+        #head-title {
+            img {
+                width: 50%;
+            }
+        }
+        #share {
+            width: 20%;
+        }
+        #info {
+            @include w-h(40%, 20%);
+            margin-top: -50px;
+        }
+        #start-btn {
+            button {
+                width: 62%;
+                padding: 2.5% 0;
+            }
+        }
+        #dialog {
+            width: 70%;
+            left: 15%;
+        }
+    }
+}

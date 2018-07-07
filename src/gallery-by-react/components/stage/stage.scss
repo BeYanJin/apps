@@ -1,0 +1,38 @@
+@import "../../styles/utils/mixins.scss";
+
+.component-wrap {
+    @include w-h(100%, 100%);
+    background-color: #222;
+}
+
+/* stage -- start */
+.stage {
+    position: relative;
+    @include w-h(100%, 100%);
+}
+/* stage -- end */
+
+/* image -- start */
+.img-section {
+    position: relative;
+    @include w-h(100%, 100%);
+    overflow: hidden;
+    background-color: #ddd;
+    perspective: 1800px;
+    -webkit-perspective: 1800px;
+}
+/* image -- end */
+
+/* controller -- start */
+.controller-nav {
+    @include position(absolute, bottom, 30px, left, 0);
+    @include w-h(100%, 30px);
+    text-align: center;
+}
+/* controller -- end */
+
+@media screen and (max-width: 768px) {
+    .content .controller-nav {
+        bottom: 35px;
+    }
+}

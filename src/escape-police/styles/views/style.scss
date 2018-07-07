@@ -1,0 +1,292 @@
+@import "animation.scss";
+
+#body-wrap {
+    @include w-h(100%, 100%);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    // 初始的背景
+    #initial-layer {
+        @include position(absolute, top, 0, left, 0);
+        @include w-h(100%, 100%);
+        background-color: #C4BDA7;
+        @include opacity(0.85);
+        z-index: 999;
+    }
+    // 标题与规则图片
+    #rule {
+        position: relative;
+        width: 94%;
+        top: 80px;
+        margin: 0 auto;
+        img {
+            @include w-h(100%, auto);
+        }
+    }
+    // 开始游戏按钮
+    #start-btn {
+        position: relative;
+        top: 60px;
+        text-align: center;
+        button {
+            @include w-h(175px, 72px);
+            background: url("static/images/img.png");
+            background-position: -5px -320px;
+            background-size: 500px 650px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+    // 游戏的背景
+    #game-bg {
+        #game-bg-color {
+            @include position(absolute, top, 479px, left, 0);
+            @include w-h(100%, 100%);
+            background-color: #D3CDBD;
+        }
+        @include position(absolute, top, 0, left, 0);
+        @include w-h(100%, 480px);
+        background: url("static/images/bg.jpg") repeat-x;
+        background-size: 1120px 480px;
+        z-index: -1;
+        // 地面
+        #ground {
+            @include w-h(100%, 40px);
+            // 数字
+            span {
+                position: absolute;
+                top: 270px;
+                @include w-h(40px, 80px);
+                display: block;
+                font-size: 30px;
+                font-weight: bold;
+                color: #857e74;
+                text-decoration: none;
+                text-align: center;
+                @include prefix(transform, skew(-48deg, 0deg));
+            }
+            .alert {
+                &::before {
+                    content: "";
+                    @include prefix(transform, skew(48deg, 0deg));
+                    background-image: url("static/images/note.png");
+                    background-size: 600px 100px;
+                }
+            }
+            .alert7 {
+                &::before {
+                    @include w-h(100px, 70px);
+                    @include position(absolute, top, -60px, left, -80px);
+                    background-position: 0 0;
+                }
+            }
+            .alert14 {
+                &::before {
+                    @include w-h(140px, 80px);
+                    @include position(absolute, top, -70px, left, -120px);
+                    background-position: -110px 0;
+                }
+            }
+            .alert17 {
+                &::before {
+                    @include w-h(100px, 70px);
+                    @include position(absolute, top, -60px, left, -80px);
+                    background-position: -260px 0;
+                }
+            }
+            .alertnext {
+                &::before {
+                    @include w-h(150px, 70px);
+                    @include position(absolute, top, -130px, left, -80px);
+                    background-position: -370px 0;
+                }
+            }
+        }
+    }
+    // 思考时间倒计时
+    #counter {
+        margin: 10px 20px 0 0;
+        text-align: right;
+        p {
+            color: #8F7E60;
+            font-size: 20px;
+        }
+        span {
+            color: #857E74;
+            font-size: 70px;
+            &::after {
+                content: "秒";
+                color: #8F7E60;
+                font-size: 20px;
+            }
+        }
+    }
+    // 潮汕快炒小哥
+    #packman {
+        @include w-h(85px, 102px);
+        @include position(absolute, top, 200px, left, 23px);
+        background: url("static/images/img.png");
+        background-position: -5px -530px;
+        background-size: 500px 650px;
+        z-index: -1;
+        &.packman-run1 {
+            background-position:-5px -530px;
+            @include prefix(animation, run1 0.1s);
+        }
+        &.packman-run2 {
+            background-position:-5px -530px;
+            @include prefix(animation, run2 0.1s);
+        }
+        &.packman-escape {
+            background-position: -185px -530px;
+        }
+        &.packman-caught {
+            @include w-h(120px, 110px);
+            left: 100px;
+            background: url("static/images/over.png");
+            background-size: 400px 250px;
+            background-position: -210px 0;
+        }
+    }
+    // 城管
+    #police {
+        .police {
+            display: none;
+            position: absolute;
+            @include w-h(60px, 110px);
+            background: url("static/images/over.png");
+            background-size: 400px 250px;
+        }
+        #police1 {
+            top: 230px;
+            left: 10px;
+            &.police1-catch {
+                display: block;
+                @include prefix(animation, catch1 0.5s);
+            }
+        }
+        #police2 {
+            top: 155px;
+            left: 60px;
+            background-position: -70px 0;
+            &.police2-catch {
+                display: block;
+                @include prefix(animation, catch2 0.5s);
+            }
+        }
+        #police3 {
+            top: 230px;
+            left: 200px;
+            background-position: -140px 0;
+            &.police3-catch {
+                display: block;
+                @include prefix(animation, catch3 0.5s);
+            }
+        }
+    }
+    // 打斗场景
+    #beat-cloud {
+        @include position(absolute, top, 200px, left, 50px);
+        background: url("static/images/over.png");
+        @include w-h(180px, 90px);
+        background-size: 400px 250px;
+        background-position: 0 -120px;
+        display: none;
+        &.beat {
+            display: block;
+            @include prefix(animation, beat 0.5s);
+        }
+    }
+    // 游戏控制按钮
+    #game-btn {
+        position: absolute;
+        top: 350px;
+        width: 100%;
+        text-align: center;
+        #escape, #run {
+            display: inline-block;
+            @include w-h(135px, 71px);
+            background-image: url("static/images/img.png");
+            background-color: transparent;
+            background-size: 500px 650px;
+            cursor: pointer;
+        }
+        #escape{
+            background-position: -5px -170px;
+        }
+        #run {
+            background-position: -145px -170px;
+        }
+    }
+    // 尾末版权信息
+    #footer {
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    // 游戏结束后显示的层
+    #game-over-layer {
+        @include position(absolute, top, 0, left, 0);
+        @include w-h(100%, 100%);
+        background-color: #C4BDA7;
+        @include opacity(0.85);
+    }
+    // 分享到朋友圈 图片
+    #share {
+        @include w-h(224px, 106px);
+        @include position(absolute, top, 0, right, 0);
+        background: url("static/images/share.png");
+        background-size: 100% 100%;
+        z-index: 9;
+    }
+    // 怎么玩 图片
+    #how-to-play {
+        @include w-h(79px, 45px);
+        @include position(absolute, top, 125px, right, 50px);
+        background: url("static/images/how.png");
+        background-color: transparent;
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+    // game over 文字
+    #info {
+        width: 100%;
+        position: absolute;
+        top: 230px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        span {
+            color: #AF4C1E;
+            margin: 0 5px;
+        }
+        div {
+            line-height: 25px;
+        }
+    }
+    // 加入我们 和 在跑一次 按钮
+    #game-over-btn {
+        position: absolute;
+        top: 350px;
+        width: 100%;
+        text-align: center;
+        #join, #again {
+            display: inline-block;
+            @include w-h(135px, 57px);
+            background-image: url("static/images/img.png");
+            background-color: transparent;
+            background-size: 500px 650px;
+            cursor: pointer;
+        }
+        #join{
+            background-position: -5px -400px;
+        }
+        #again {
+            background-position: -145px -400px;
+        }
+    }
+}

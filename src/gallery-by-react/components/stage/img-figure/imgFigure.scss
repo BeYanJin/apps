@@ -1,0 +1,55 @@
+@import "../../../styles/utils/mixins.scss";
+
+/* image -- start */
+.img-section {
+    @at-root {
+
+        .img-figure {
+            position: absolute;
+            @include w-h(320px, 360px);
+            padding: 40px;
+            box-sizing: border-box;
+            background-color: #fff;
+            cursor: pointer;
+            transform-origin: 0 50% 0;
+            transform-style: preserve-3d;
+            transition: transform .6s ease-in-out,
+                        left .6s ease-in-out,
+                        top .6s ease-in-out;
+            &.is-inverse {
+                transform: translate(320px) rotateY(180deg);
+            }
+
+            img {
+                @include w-h(240px, 240px);
+            }
+
+            figcaption {
+                text-align: center;
+                .img-title {
+                    margin-top: 20px;
+                    color: #a7a0a2;
+                    font-size: 16px;
+                }
+                .img-back {
+                    @include position(absolute, top, 0, left, 0);
+                    @include w-h(100%, 100%);
+                    box-sizing: border-box;
+                    padding: 30px;
+                    color: #666;
+                    text-align: center;
+                    z-index: -1;
+                    /**
+                    * 当元素不面向屏幕时是否可见
+                    * 如果在旋转元素不希望看到其背面时,该属性很有用
+                    */
+                    backface-visibility: hidden;
+                    /* translateZ(1px) 是为了解决safari浏览器的兼容性问题 */
+                    transform: rotateY(180deg) translateZ(1px);
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+/* image -- end */

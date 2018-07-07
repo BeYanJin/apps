@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>你能逃离北二的控制吗</title>
+</head>
+
+<body>
+
+    <div id="head-title" >
+        <!-- 标题图片：你能逃离北二的控制吗 -->
+        <img src="static/images/bg1.png"></img>
+    </div>
+
+    <!-- 游戏规则介绍面板 -->
+    <div id="info">
+        <p>游戏规则:</p>
+        <p>
+            利用<span>重力感应</span>逃避铺天而来的食物且不可触碰屏幕边缘，逃避北二的魔爪！！
+        </p>
+    </div>
+
+    <!-- 开始游戏按钮 -->
+    <div id="start-btn">
+        <button>游戏开始</button>
+    </div>
+
+    <!-- 尾部版权信息 -->
+    <div id="footer">created by华工创维俱乐部</div>
+
+    <!-- 画布, 铺满屏幕 -->
+    <canvas id="canvas">您的浏览器不支持canvas</canvas>
+
+    <!-- 分享到朋友圈图片 -->
+    <img id="share" src="static/images/share.png" class="hide" />
+
+    <div class="hide">
+        <img id="emo1" src="static/images/emo1.png" />
+        <img id="emo2" src="static/images/emo2.png" />
+        <img id="rice" src="static/images/rice.png" />
+        <img id="tomato" src="static/images/tomato.png" />
+        <img id="eggplant" src="static/images/eggplant.png" />
+        <img id="corn" src="static/images/corn.png" />
+    </div>
+
+    <!-- 游戏结束后弹出的对话框 -->
+    <div id="dialog" class="hide">
+        <div id="game-over-text">you lose:5s,again?</div>
+        <div class="btn-group clearfix">
+            <div class="btn" id="again-btn">再来一次</div>
+            <a class="btn" href="http://form.mikecrm.com/GjMnSV">加入我们</a>
+        </div>
+    </div>
+
+    <!-- 背景音乐 -->
+    <audio src="static/musics/music.mp3" autoplay="autoplay" loop="loop" hidden="true"></audio>
+
+</body>
+
+
+</html>

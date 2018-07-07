@@ -1,0 +1,34 @@
+@import "../../../styles/utils/mixins.scss";
+@import "../../../static/fonts/iconfont.css";
+
+/* controller -- start */
+.controller-nav {
+    font-size: 0;
+    @at-root {
+        .controller-unit {
+            display: inline-block;
+            @include w-h(30px, 30px);
+            margin: 0 10px;
+            text-align: center;
+            transform: scale(0.5);
+            transition: transform .6s ease-in-out;
+            border-radius: 50%;
+            background-color: #aaa;
+            vertical-align: middle;
+            cursor: pointer;
+            &.is-center {
+                background: #888;
+                transform: scale(1);
+                &::after {
+                    content: "\e60f";
+                    color: #fff;
+                    line-height: 30px;
+                }
+                &.is-inverse {
+                    background: #555;
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
