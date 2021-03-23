@@ -1,9 +1,13 @@
-Éú³É×îÖÕÎÄ¼ş£º
+ç”Ÿæˆæœ€ç»ˆæ–‡ä»¶ï¼š
 npm run build --env=dev/prod --name=project_name
 
-µ÷ÊÔ£º
+è°ƒè¯•ï¼š
 npm start --env=dev/prod --name=project_name
 
-Éú³Égithub pages£º
+ç”Ÿæˆgithub pagesï¼š
 git subtree push --prefix=dist origin gh-pages
-
+ç›¸å…³é¡¹ç›®ï¼š
+https://beyanjin.github.io/apps/avoid-food
+https://beyanjin.github.io/apps/escape-police
+https://beyanjin.github.io/apps/flappy-bird
+https://beyanjin.github.io/apps/gallery-by-react
